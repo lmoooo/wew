@@ -12,9 +12,12 @@ TOKEN = os.getenv("TOKEN")
 
 bot = commands.Bot(command_prefix='.',case_insensitive=True)
 
+print('Ready!')
+
 @bot.command()
 async def wew(ctx):
-    
+
+    await ctx.message.delete()
     channel = bot.get_channel(216888675856941060)
    #channel = ctx.author.voice.channel
     print(channel)
@@ -32,7 +35,8 @@ async def wew(ctx):
 
 @bot.command()
 async def thicc(ctx):
-    
+
+    await ctx.message.delete()
     channel = bot.get_channel(216888675856941060)
    #channel = ctx.author.voice.channel
     print(channel)
@@ -52,6 +56,7 @@ async def thicc(ctx):
 @bot.command()
 async def woof(ctx):
     
+    await ctx.message.delete()
     channel = bot.get_channel(216888675856941060)
    #channel = ctx.author.voice.channel
     print(channel)
@@ -71,6 +76,7 @@ async def woof(ctx):
 @bot.command()
 async def welcome(ctx):
     
+    await ctx.message.delete()
     channel = bot.get_channel(216888675856941060)
    #channel = ctx.author.voice.channel
     print(channel)
@@ -85,6 +91,27 @@ async def welcome(ctx):
         await asyncio.sleep(1)
         counter = counter + 1
     await vc.disconnect()
+
+
+@bot.command()
+async def grapefruit(ctx):
+    
+    await ctx.message.delete()
+    channel = bot.get_channel(216888675856941060)
+   #channel = ctx.author.voice.channel
+    print(channel)
+    await channel.connect()
+    vc = ctx.voice_client
+
+    counter = 0
+
+    song = ("grapefruit.mp3")
+    vc.play(discord.FFmpegPCMAudio(song))
+    while vc.is_playing():
+        await asyncio.sleep(1)
+        counter = counter + 1
+    await vc.disconnect()
+
 
 
 bot.run (TOKEN)
