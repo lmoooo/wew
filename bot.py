@@ -112,6 +112,26 @@ async def grapefruit(ctx):
         counter = counter + 1
     await vc.disconnect()
 
+@bot.command()
+async def hello(ctx):
+    
+    await ctx.message.delete()
+    channel = bot.get_channel(216888675856941060)
+   #channel = ctx.author.voice.channel
+    print(channel)
+    await channel.connect()
+    vc = ctx.voice_client
+
+    counter = 0
+
+    song = ("hello.mp3")
+    vc.play(discord.FFmpegPCMAudio(song))
+    while vc.is_playing():
+        await asyncio.sleep(1)
+        counter = counter + 1
+    await vc.disconnect()
+
+
 
 
 bot.run (TOKEN)
