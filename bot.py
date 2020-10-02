@@ -116,8 +116,8 @@ async def grapefruit(ctx):
 async def hello(ctx):
     
     await ctx.message.delete()
-    channel = bot.get_channel(216888675856941060)
-   #channel = ctx.author.voice.channel
+    #channel = bot.get_channel(216888675856941060)
+    channel = ctx.author.voice.channel
     print(channel)
     await channel.connect()
     vc = ctx.voice_client
