@@ -18,8 +18,7 @@ print('Ready!')
 async def wew(ctx):
 
     await ctx.message.delete()
-    channel = bot.get_channel(216888675856941060)
-   #channel = ctx.author.voice.channel
+    channel = ctx.author.voice.channel
     print(channel)
     await channel.connect()
     vc = ctx.voice_client
@@ -37,8 +36,7 @@ async def wew(ctx):
 async def thicc(ctx):
 
     await ctx.message.delete()
-    channel = bot.get_channel(216888675856941060)
-   #channel = ctx.author.voice.channel
+    channel = ctx.author.voice.channel
     print(channel)
     await channel.connect()
     vc = ctx.voice_client
@@ -57,8 +55,7 @@ async def thicc(ctx):
 async def woof(ctx):
     
     await ctx.message.delete()
-    channel = bot.get_channel(216888675856941060)
-   #channel = ctx.author.voice.channel
+    channel = ctx.author.voice.channel
     print(channel)
     await channel.connect()
     vc = ctx.voice_client
@@ -77,8 +74,7 @@ async def woof(ctx):
 async def welcome(ctx):
     
     await ctx.message.delete()
-    channel = bot.get_channel(216888675856941060)
-   #channel = ctx.author.voice.channel
+    channel = ctx.author.voice.channel
     print(channel)
     await channel.connect()
     vc = ctx.voice_client
@@ -97,8 +93,7 @@ async def welcome(ctx):
 async def grapefruit(ctx):
     
     await ctx.message.delete()
-    channel = bot.get_channel(216888675856941060)
-   #channel = ctx.author.voice.channel
+    channel = ctx.author.voice.channel
     print(channel)
     await channel.connect()
     vc = ctx.voice_client
@@ -116,7 +111,6 @@ async def grapefruit(ctx):
 async def hello(ctx):
     
     await ctx.message.delete()
-    #channel = bot.get_channel(216888675856941060)
     channel = ctx.author.voice.channel
     print(channel)
     await channel.connect()
