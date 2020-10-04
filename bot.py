@@ -161,6 +161,24 @@ async def basingstoke(ctx):
         counter = counter + 1
     await vc.disconnect()
 
+@bot.command()
+async def milleb(ctx):
+    
+    await ctx.message.delete()
+    channel = ctx.author.voice.channel
+    print(channel)
+    await channel.connect()
+    vc = ctx.voice_client
+
+    counter = 0
+
+    song = ("milleb.mp3")
+    vc.play(discord.FFmpegPCMAudio(song))
+    while vc.is_playing():
+        await asyncio.sleep(1)
+        counter = counter + 1
+    await vc.disconnect()
+
 
 
 
