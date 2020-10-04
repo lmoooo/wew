@@ -125,6 +125,42 @@ async def hello(ctx):
         counter = counter + 1
     await vc.disconnect()
 
+@bot.command()
+async def winning(ctx):
+    
+    await ctx.message.delete()
+    channel = ctx.author.voice.channel
+    print(channel)
+    await channel.connect()
+    vc = ctx.voice_client
+
+    counter = 0
+
+    song = ("winning.mp3")
+    vc.play(discord.FFmpegPCMAudio(song))
+    while vc.is_playing():
+        await asyncio.sleep(1)
+        counter = counter + 1
+    await vc.disconnect()
+
+@bot.command()
+async def basingstoke(ctx):
+    
+    await ctx.message.delete()
+    channel = ctx.author.voice.channel
+    print(channel)
+    await channel.connect()
+    vc = ctx.voice_client
+
+    counter = 0
+
+    song = ("basingstoke.mp3")
+    vc.play(discord.FFmpegPCMAudio(song))
+    while vc.is_playing():
+        await asyncio.sleep(1)
+        counter = counter + 1
+    await vc.disconnect()
+
 
 
 
