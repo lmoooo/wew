@@ -15,6 +15,12 @@ bot = commands.Bot(command_prefix='.',case_insensitive=True)
 print('Ready!')
 
 @bot.command()
+async def stop(ctx):
+    channel = ctx.author.voice.channel
+    await channel.disconnect()
+
+
+@bot.command()
 async def wew(ctx):
 
     await ctx.message.delete()
