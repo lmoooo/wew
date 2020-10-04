@@ -184,6 +184,24 @@ async def milleb(ctx):
         counter = counter + 1
     await vc.disconnect()
 
+@bot.command()
+async def jew(ctx):
+    
+    await ctx.message.delete()
+    channel = ctx.author.voice.channel
+    print(channel)
+    await channel.connect()
+    vc = ctx.voice_client
+
+    counter = 0
+
+    song = ("jew.mp3")
+    vc.play(discord.FFmpegPCMAudio(song))
+    while vc.is_playing():
+        await asyncio.sleep(1)
+        counter = counter + 1
+    await vc.disconnect()
+
 
 
 
