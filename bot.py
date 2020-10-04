@@ -11,14 +11,13 @@ load_dotenv() # Load your Discord Token
 TOKEN = os.getenv("TOKEN") 
 
 bot = commands.Bot(command_prefix='.',case_insensitive=True)
-
+ 
 print('Ready!')
 
 @bot.command()
 async def stop(ctx):
-    channel = ctx.author.voice.channel
-    await channel.disconnect()
-
+    await ctx.message.delete()
+    await ctx.voice_client.disconnect()
 
 @bot.command()
 async def wew(ctx):
@@ -28,7 +27,7 @@ async def wew(ctx):
     print(channel)
     await channel.connect()
     vc = ctx.voice_client
-
+    
     counter = 0
 
     song = ("wow.mp3")
