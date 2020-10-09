@@ -202,6 +202,42 @@ async def jew(ctx):
         counter = counter + 1
     await vc.disconnect()
 
+@bot.command()
+async def whatisgoingonhere(ctx):
+    
+    await ctx.message.delete()
+    channel = ctx.author.voice.channel
+    print(channel)
+    await channel.connect()
+    vc = ctx.voice_client
+
+    counter = 0
+
+    song = ("what is going on here.mp3")
+    vc.play(discord.FFmpegPCMAudio(song))
+    while vc.is_playing():
+        await asyncio.sleep(1)
+        counter = counter + 1
+    await vc.disconnect()
+
+@bot.command()
+async def BWEKFAST(ctx):
+    
+    await ctx.message.delete()
+    channel = ctx.author.voice.channel
+    print(channel)
+    await channel.connect()
+    vc = ctx.voice_client
+
+    counter = 0
+
+    song = ("bwekfast.mp3")
+    vc.play(discord.FFmpegPCMAudio(song))
+    while vc.is_playing():
+        await asyncio.sleep(1)
+        counter = counter + 1
+    await vc.disconnect()
+
 
 
 
