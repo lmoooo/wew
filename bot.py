@@ -213,7 +213,7 @@ async def whatisgoingonhere(ctx):
 
     counter = 0
 
-    song = ("what is going on here.mp3")
+    song = ("whatisgoingonhere.mp3")
     vc.play(discord.FFmpegPCMAudio(song))
     while vc.is_playing():
         await asyncio.sleep(1)
